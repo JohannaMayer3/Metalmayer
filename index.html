@@ -404,6 +404,44 @@ footer{
   text-transform:uppercase;
 }
 
+.footer-links{display:flex; align-items:center; gap:20px;}
+
+details.impressum{
+  order:3;
+  flex-basis:100%;
+}
+details.impressum summary{
+  cursor:pointer;
+  list-style:none;
+  color:var(--ink-soft);
+  transition:color .15s;
+}
+details.impressum summary::-webkit-details-marker{display:none;}
+details.impressum summary:hover{color:var(--ink);}
+details.impressum[open] summary{color:var(--ink);}
+
+.impressum-body{
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  text-transform:none;
+}
+.impressum-body dl{
+  display:grid; grid-template-columns:auto 1fr; gap:10px 20px;
+  font-size:13px;
+  max-width:640px;
+}
+.impressum-body dt{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  color:var(--ink);
+  text-transform:uppercase;
+  padding-top:1px;
+}
+.impressum-body dd{color:var(--ink-soft);}
+.impressum-body dd a{color:var(--ink-soft); text-decoration:underline;}
+.impressum-body dd a:hover{color:var(--plasma);}
+
 </style>
 </head>
 <body>
@@ -630,7 +668,36 @@ footer{
 <footer>
   <div class="wrap footer-row">
     <span>© 2026 METALMAYER — Ing. Roman Mayer</span>
-    <span>Gaaden · Niederösterreich</span>
+    <div class="footer-links">
+      <span>Gaaden · Niederösterreich</span>
+    </div>
+    <details class="impressum" id="impressum-details">
+      <summary>Impressum</summary>
+      <div class="impressum-body">
+        <dl>
+          <dt>Name</dt>
+          <dd>Ing. Roman Mayer</dd>
+
+          <dt>Anschrift</dt>
+          <dd>Blindgasse 5, 2531 Gaaden bei Mödling, Niederösterreich, Österreich</dd>
+
+          <dt>Unternehmensgegenstand</dt>
+          <dd>Metalltechnik für Metall- und Maschinenbau</dd>
+
+          <dt>Kontakt</dt>
+          <dd>Tel: <a href="tel:+436769033446">+43 676 9033446</a> · E-Mail: <a href="mailto:mayer.roman1975@gmail.com">mayer.roman1975@gmail.com</a></dd>
+
+          <dt>Mitgliedschaften</dt>
+          <dd>Wirtschaftskammer Niederösterreich, Bezirksstelle Mödling</dd>
+
+          <dt>Gewerbebehörde</dt>
+          <dd>Bezirkshauptmannschaft Mödling</dd>
+
+          <dt>Anwendbare Vorschriften</dt>
+          <dd>Gewerbeordnung (GewO), abrufbar unter <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener">www.ris.bka.gv.at</a></dd>
+        </dl>
+      </div>
+    </details>
   </div>
 </footer>
 
